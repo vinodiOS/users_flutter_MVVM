@@ -9,10 +9,6 @@ class MovieListViewModel extends ChangeNotifier {
     final results = await UserService().fetchUsers();
     if (results != null) {
       users = results.map((e) => UserViewModel(user: e)).toList();
-      /*
-      results.forEach((element) {
-        users.add(UserViewModel(user: element));
-      });*/
     }
     notifyListeners();
   }
