@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:users/view_models/user_view_model.dart';
 import 'package:users/widgets/circle_profile_image.dart';
-import 'package:users/widgets/user_personal_details.dart';
+import 'package:users/widgets/user_personal_details.dart' as reusableWidgets;
+
+/// UserDetails Screen shows details of user after selection from user list along
+/// with profile image, full name and email.
 
 class UserDetails extends StatelessWidget {
   final UserViewModel selectedUser;
@@ -20,23 +23,20 @@ class UserDetails extends StatelessWidget {
       ),
       body: Center(
           child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           UserProfileImage(
             avatar: selectedUser.avatar,
             size: 100,
           ),
           space,
-          Text(
-            "${selectedUser.firstName} ${selectedUser.lastName}",
-            style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
-          ),
+          reusableWidgets.Title(
+              title: "${selectedUser.firstName} ${selectedUser.lastName}"),
           space,
-          Text(
-            selectedUser.email,
-            style: TextStyle(fontSize: 14),
-          ),
+          reusableWidgets.Email(
+            email: selectedUser.email,
+          )
         ],
       )),
     );

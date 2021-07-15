@@ -4,6 +4,9 @@ import 'package:users/screens/user_details_screen.dart';
 import 'package:users/widgets/circle_profile_image.dart';
 import 'package:users/widgets/user_personal_details.dart';
 
+///`UserList` is reusable component which show list of user
+///UserList is initialized with `UserViewModel`
+
 class UserList extends StatelessWidget {
   final List<UserViewModel> users;
 
@@ -17,6 +20,7 @@ class UserList extends StatelessWidget {
         final user = this.users[index];
         return InkWell(
           onTap: () {
+            //Navigates to UserDetails page
             Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -39,8 +43,10 @@ class UserList extends StatelessWidget {
                       width: 20,
                     ),
                     UserPersonalDetails(
-                        fullName: "${user.firstName} ${user.lastName}",
-                        email: user.email)
+                      fullName: "${user.firstName} ${user.lastName}",
+                      email: user.email,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                    )
                   ],
                 ),
               ),

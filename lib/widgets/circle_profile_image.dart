@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+/// `UserProfileImage` is reusable widget with returns circular image
+/// parameters:
+/// [avatar] URL of image
+/// [size] size of image
+
 class UserProfileImage extends StatelessWidget {
   final String avatar;
   final double size;

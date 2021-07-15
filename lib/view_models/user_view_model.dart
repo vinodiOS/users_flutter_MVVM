@@ -1,5 +1,6 @@
 import 'package:users/models/user.dart';
 
+///UserViewModel with gettable properties
 class UserViewModel {
   final User user;
 

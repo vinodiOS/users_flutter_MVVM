@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: ChangeNotifierProvider(
-        create: (context) => MovieListViewModel(),
+        create: (context) => UserListViewModel(),
         child: UserListScreen(),
       ),
     );
