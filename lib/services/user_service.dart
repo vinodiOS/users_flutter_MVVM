@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:users/models/user.dart';
-import 'package:users/globals/globals.dart';
+import 'package:users/util/globals.dart';
 import 'package:http/http.dart' as http;
 
 ///`UserService` performs http operations to fetch data from server
