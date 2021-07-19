@@ -25,12 +25,12 @@ class BodyBuilder extends StatelessWidget {
       case APIRequestStatus.unInitialized:
         return LoadingWidget();
       case APIRequestStatus.connectionError:
-        return MyErrorWidget(
+        return UsersErrorWidget(
           refreshCallBack: reload,
           isConnection: true,
         );
       case APIRequestStatus.error:
-        return MyErrorWidget(
+        return UsersErrorWidget(
           refreshCallBack: reload,
           isConnection: false,
         );

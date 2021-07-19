@@ -21,8 +21,7 @@ class _UserListScreenState extends State<UserListScreen> {
   @override
   Widget build(BuildContext context) {
     return Consumer(
-      builder:
-          (BuildContext context, UserListViewModel viewModel, Widget? child) {
+      builder: (_, UserListViewModel viewModel, __) {
         return Scaffold(
           appBar: AppBar(
             title: Text('Users'),

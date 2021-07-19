@@ -7,7 +7,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 ///This class defines async functions to fetch users from UserService class
 
-class UserListViewModel extends ChangeNotifier {
+class UserListViewModel with ChangeNotifier {
   List<UserViewModel> users = [];
   APIRequestStatus apiRequestStatus = APIRequestStatus.loading;
 

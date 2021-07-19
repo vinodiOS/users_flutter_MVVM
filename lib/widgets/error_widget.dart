@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class MyErrorWidget extends StatelessWidget {
+class UsersErrorWidget extends StatelessWidget {
   final Function refreshCallBack;
   final bool isConnection;
 
-  MyErrorWidget({required this.refreshCallBack, this.isConnection = false});
+  UsersErrorWidget({required this.refreshCallBack, this.isConnection = false});
 
   @override
   Widget build(BuildContext context) {
